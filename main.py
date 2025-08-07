@@ -2,7 +2,7 @@
 projekt_1.py: třetí projekt do Engeto Online Python Akademie
 
 author: Anna Horáková
-email: horakova.info@gmail.com
+e-mail: horakova.info@gmail.com
 """
 
 import sys
