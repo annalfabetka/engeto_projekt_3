@@ -2,7 +2,7 @@
 projekt_1.py: třetí projekt do Engeto Online Python Akademie
 
 author: Anna Horáková
-e-mail: horakova.info@gmail.com
+email: horakova.info@gmail.com
 """
 
 import sys
@@ -13,10 +13,15 @@ import re
 from unidecode import unidecode
 
 
-def validate_arguments(url_celek):
+def validate_arguments(url_celek, csv_output):
     if not isinstance(url_celek, str) or not url_celek.startswith('https://www.volby.cz/'):
         print("Chyba: První argument musí být platná URL adresa začínající na 'https://www.volby.cz/'")
         return False
+    
+    if not isinstance(csv_output, str) or not csv_output.endswith('.csv'):
+        print("Chyba: Druhý argument musí být ve formátu .csv")
+        return False
+
     return True
 
 
@@ -105,7 +110,7 @@ def main():
     url_celek = sys.argv[1]
     csv_output = sys.argv[2]
 
-    if not validate_arguments(url_celek):
+    if not validate_arguments(url_celek, csv_output):
         sys.exit(1)
 
     print(f"STAHUJI DATA Z VYBRANÉHO URL: {url_celek}")
