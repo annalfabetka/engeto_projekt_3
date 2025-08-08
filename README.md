@@ -35,7 +35,16 @@ python3 main.py "https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=12&xnum
 Tímto příkazem skript stáhne výsledky voleb v okrese Prostějov a uloží je do souboru vysledky_prostejov.csv.
 
 
-## Ukázka výstupního CSV
+## Výstupní CSV
+Ve výstupu (soubor .csv) každý řádek obsahuje informace pro konkrétní obec. Tedy podobu:
+1. kód obce
+2. název obce
+3. voliči v seznamu
+4. vydané obálky
+5. platné hlasy
+6. kandidující strany (co sloupec, to počet hlasů pro stranu pro všechny strany).
+
+### Ukázka
 První řádky souboru mohou vypadat např. takto:
 code,location,registered,envelopes,valid,ANO 2011,ODS,TOP 09,...
 590867,Prostějov,12345,11000,10850,4560,1350,890,...
